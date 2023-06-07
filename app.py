@@ -27,7 +27,8 @@ df0 = pd.read_csv('covid.csv')  # base historico
 df1 = pd.read_csv('vih.csv')  # base actual
 df2 = pd.read_csv('causas_muertes.csv')  # base actual
 
-# Tratamiento de datos 
+# Tratamiento de datos
+df0['fecha_muestra'] = pd.to_datetime(df0['fecha_muestra']) 
 df0['fecha_muestra'] = df0['fecha_muestra'].apply(
     pd.to_datetime, format='%Y/%m/%d')
 df0['año'] = df0['fecha_muestra'].dt.year
