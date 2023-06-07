@@ -233,7 +233,7 @@ col1.plotly_chart(fig)
 
 # --------GRAFICA 6
 # Crear dataset
-estadisticas = df1.query('edad != "All"').groupby(['edad'])['diagnosticos_vih', 'diagnosticos_sida'].mean().reset_index()
+estadisticas = df1.query('edad != "All"').groupby('edad')['diagnosticos_vih', 'diagnosticos_sida'].mean().reset_index()
 
 # Crear la figura y ejes para el gráfico de líneas
 fig = px.line(estadisticas, x='edad', y=['diagnosticos_vih', 'diagnosticos_sida'], title='Promedio SIDA y VIH por rango de edad')
