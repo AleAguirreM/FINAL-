@@ -385,6 +385,7 @@ st.markdown("<h2 style='text-align: center; color: #00000;'>Como otras enfermeda
 
 
 c1.markdown("&nbsp;" * 800)
+c1, c2 = st.columns((1, 1))
 # ----------------------------------------------------PREGUNTA 9------------------------------------------------------------
 # ¿cantidad de muertes por raza?
 
@@ -416,7 +417,7 @@ fig.update_layout(
 )
 
 # Mostrar el gráfico de barras en Streamlit
-st.plotly_chart(fig)
+c1.plotly_chart(fig)
 
 
 # ----------------------------------------------------PREGUNTA 8------------------------------------------------------------
@@ -502,7 +503,7 @@ fig.update_layout(
 )
 
 # Mostrar el gráfico de barras en Streamlit
-st.plotly_chart(fig)
+c2.plotly_chart(fig)
 
 
 # ----------------------------------------------------PREGUNTA 7------------------------------------------------------------
