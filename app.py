@@ -352,8 +352,7 @@ c2.plotly_chart(fig)
 # ----GRAFICA 3
 
 # Agrupar los datos por día del mes y calcular la suma de 'examinados', 'hospitalizaciones' y 'muertes'
-datos_por_dia = df0.groupby(df0['fecha_muestra'].dt.day)[
-    'residentes_examinados', 'hospitalizaciones', 'muertes'].sum()
+datos_por_dia = df0.groupby(df0['fecha_muestra'].dt.day)['diagnosticos_vih'].sum().reset_index()
 
 # Calcular la tasa de mortalidad y la tasa de hospitalización por día del mes
 datos_por_dia['tasa_mortalidad'] = (
